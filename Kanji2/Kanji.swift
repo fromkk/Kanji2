@@ -43,7 +43,9 @@ public class Kanji {
             NSAttributedStringKey.paragraphStyle: paragraphStyle
         ]
         
-        (character as NSString).draw(at: .zero, withAttributes: attributes)
+        let textSize = (character as NSString).boundingRect(with: size, options: [], attributes: attributes)
+        
+        (character as NSString).draw(at: CGPoint(x: (size.width - textSize.width) / 2.0, y: (size.height - textSize.height) / 2.0), withAttributes: attributes)
         
         image.unlockFocus()
         
