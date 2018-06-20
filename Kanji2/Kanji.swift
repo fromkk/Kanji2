@@ -11,6 +11,16 @@ import CoreGraphics
 
 public class Kanji {
     
+    public static func setup(with path: String) throws {
+        let url = URL(fileURLWithPath: path)
+        let filename = url.lastPathComponent
+        let directory = path.replacingOccurrences(of: filename, with: "")
+        let fileManager = FileManager.default
+        if !fileManager.fileExists(atPath: directory) {
+            try fileManager.createDirectory(atPath: directory, withIntermediateDirectories: true, attributes: nil)
+        }
+    }
+    
     public static func image(_ character: String, font: String, size: CGSize) -> NSImage? {
         
         let width: Int = Int(size.width)

@@ -42,6 +42,13 @@ guard let outputPath = arguments["output"] else {
     exit(1)
 }
 
+do {
+    try Kanji.setup(with: outputPath)
+} catch {
+    print("setup failed")
+    exit(1)
+}
+
 let width: Int = Int(arguments["width"] ?? "300")!
 let height: Int = Int(arguments["height"] ?? "300")!
 
