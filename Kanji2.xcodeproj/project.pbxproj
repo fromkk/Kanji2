@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		ADA50AC020DA503F000D3558 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA50ABF20DA503F000D3558 /* main.swift */; };
+		ADA50ADF20DA5982000D3558 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA50AD520DA5094000D3558 /* Command.swift */; };
+		ADA50AE020DA5982000D3558 /* Kanji.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA50ADB20DA5443000D3558 /* Kanji.swift */; };
+		ADA50AE120DA5982000D3558 /* Arguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA50AD320DA5081000D3558 /* Arguments.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,9 @@
 /* Begin PBXFileReference section */
 		ADA50ABC20DA503F000D3558 /* Kanji2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Kanji2; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADA50ABF20DA503F000D3558 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		ADA50AD320DA5081000D3558 /* Arguments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arguments.swift; sourceTree = "<group>"; };
+		ADA50AD520DA5094000D3558 /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
+		ADA50ADB20DA5443000D3558 /* Kanji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kanji.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +49,7 @@
 			children = (
 				ADA50ABE20DA503F000D3558 /* Kanji2 */,
 				ADA50ABD20DA503F000D3558 /* Products */,
+				ADA50AD720DA50A4000D3558 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,9 +64,19 @@
 		ADA50ABE20DA503F000D3558 /* Kanji2 */ = {
 			isa = PBXGroup;
 			children = (
+				ADA50AD320DA5081000D3558 /* Arguments.swift */,
+				ADA50AD520DA5094000D3558 /* Command.swift */,
+				ADA50ADB20DA5443000D3558 /* Kanji.swift */,
 				ADA50ABF20DA503F000D3558 /* main.swift */,
 			);
 			path = Kanji2;
+			sourceTree = "<group>";
+		};
+		ADA50AD720DA50A4000D3558 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,7 +136,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADA50AE120DA5982000D3558 /* Arguments.swift in Sources */,
 				ADA50AC020DA503F000D3558 /* main.swift in Sources */,
+				ADA50ADF20DA5982000D3558 /* Command.swift in Sources */,
+				ADA50AE020DA5982000D3558 /* Kanji.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
