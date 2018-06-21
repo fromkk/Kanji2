@@ -12,16 +12,18 @@ import CoreGraphics
 
 func showHelp() {
     print("""
-kanji --character <character> --width <width> --height <height> --font <font> --output <output>
-character | set character for create image
-width     | set image width
-height    | set image height
-font      | set font name
-output    | set image output path
+kanji --character <character> --width <width> --height <height> --font <font> --output <output> --background <background> --color <color>
+character  | set character for create image
+width      | set image width
+height     | set image height
+font       | set font name
+background | rgb background color
+color      | rgb text color
+output     | set image output path
 """)
 }
 
-let arguments = Arguments().parse()
+let arguments: [String: String] = Arguments().parse()
 
 guard let character = arguments["character"], character.count == 1 else {
     showHelp()
@@ -51,8 +53,13 @@ do {
 
 let width: Int = Int(arguments["width"] ?? "300")!
 let height: Int = Int(arguments["height"] ?? "300")!
+let backgroundColorCode: String = arguments["background"] ?? "#FFFFFF"
+let textColorCode: String = arguments["color"] ?? "#000000"
 
-guard let image = Kanji.image(character, font: font, size: CGSize(width: CGFloat(width), height: CGFloat(height))) else {
+let backgroundColor: NSColor = NSColor(rgbColor: backgroundColorCode) ?? .white
+let textColor: NSColor = NSColor(rgbColor: textColorCode) ?? .black
+
+guard let image = Kanji.image(character, font: font, size: CGSize(width: CGFloat(width), height: CGFloat(height)), backgroundColor: backgroundColor, textColor: textColor) else {
     print("image make failed")
     exit(1)
 }

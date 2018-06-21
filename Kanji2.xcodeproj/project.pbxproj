@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD91C7F820DB31EB006DC02D /* NSColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD91C7F720DB31EB006DC02D /* NSColor+Extensions.swift */; };
 		ADA50AC020DA503F000D3558 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA50ABF20DA503F000D3558 /* main.swift */; };
 		ADA50ADF20DA5982000D3558 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA50AD520DA5094000D3558 /* Command.swift */; };
 		ADA50AE020DA5982000D3558 /* Kanji.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA50ADB20DA5443000D3558 /* Kanji.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AD91C7F720DB31EB006DC02D /* NSColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSColor+Extensions.swift"; sourceTree = "<group>"; };
 		ADA50ABC20DA503F000D3558 /* Kanji2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Kanji2; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADA50ABF20DA503F000D3558 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		ADA50AD320DA5081000D3558 /* Arguments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arguments.swift; sourceTree = "<group>"; };
@@ -44,6 +46,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD91C7F420DB319C006DC02D /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				ADA50AD320DA5081000D3558 /* Arguments.swift */,
+				ADA50AD520DA5094000D3558 /* Command.swift */,
+			);
+			path = Supports;
+			sourceTree = "<group>";
+		};
+		AD91C7F520DB31A6006DC02D /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				ADA50ADB20DA5443000D3558 /* Kanji.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		AD91C7F620DB31DD006DC02D /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				AD91C7F720DB31EB006DC02D /* NSColor+Extensions.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
 		ADA50AB320DA503E000D3558 = {
 			isa = PBXGroup;
 			children = (
@@ -64,9 +91,9 @@
 		ADA50ABE20DA503F000D3558 /* Kanji2 */ = {
 			isa = PBXGroup;
 			children = (
-				ADA50AD320DA5081000D3558 /* Arguments.swift */,
-				ADA50AD520DA5094000D3558 /* Command.swift */,
-				ADA50ADB20DA5443000D3558 /* Kanji.swift */,
+				AD91C7F520DB31A6006DC02D /* Core */,
+				AD91C7F420DB319C006DC02D /* Supports */,
+				AD91C7F620DB31DD006DC02D /* Extentions */,
 				ADA50ABF20DA503F000D3558 /* main.swift */,
 			);
 			path = Kanji2;
@@ -138,6 +165,7 @@
 			files = (
 				ADA50AE120DA5982000D3558 /* Arguments.swift in Sources */,
 				ADA50AC020DA503F000D3558 /* main.swift in Sources */,
+				AD91C7F820DB31EB006DC02D /* NSColor+Extensions.swift in Sources */,
 				ADA50ADF20DA5982000D3558 /* Command.swift in Sources */,
 				ADA50AE020DA5982000D3558 /* Kanji.swift in Sources */,
 			);

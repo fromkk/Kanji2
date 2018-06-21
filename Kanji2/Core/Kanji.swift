@@ -21,7 +21,7 @@ public class Kanji {
         }
     }
     
-    public static func image(_ character: String, font: String, size: CGSize) -> NSImage? {
+    public static func image(_ character: String, font: String, size: CGSize, backgroundColor: NSColor = .white, textColor: NSColor = .black) -> NSImage? {
         
         let width: Int = Int(size.width)
         let height: Int = Int(size.height)
@@ -34,7 +34,7 @@ public class Kanji {
             return nil
         }
         
-        context.setFillColor(NSColor.white.cgColor)
+        context.setFillColor(backgroundColor.cgColor)
         context.fill(CGRect(origin: .zero, size: size))
         
         guard let imageRef = context.makeImage() else {
@@ -50,7 +50,8 @@ public class Kanji {
         
         let attributes: [NSAttributedStringKey: Any] = [
             NSAttributedStringKey.font: NSFont(name: font, size: size.height)!,
-            NSAttributedStringKey.paragraphStyle: paragraphStyle
+            NSAttributedStringKey.paragraphStyle: paragraphStyle,
+            NSAttributedStringKey.foregroundColor: textColor
         ]
         
         let textSize = (character as NSString).boundingRect(with: size, options: [], attributes: attributes)
