@@ -64,8 +64,13 @@ guard let image = Kanji.image(character, font: font, size: CGSize(width: CGFloat
     exit(1)
 }
 
-guard let data = image.tiffRepresentation else {
+guard let _data = image.tiffRepresentation, let png = NSBitmapImageRep(data: _data) else {
     print("data get failed")
+    exit(1)
+}
+
+guard let data = png.representation(using: .png, properties: [:]) else {
+    print("png convert failed")
     exit(1)
 }
 
